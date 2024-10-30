@@ -60,3 +60,16 @@ only-packages = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/fftestpackage"]
+
+[tool.hatch.envs.test]
+description = '''Environment for running the test suite'''
+extra-dependencies = [
+    'pytest',
+    'pytest-cov',
+]
+
+[[tool.hatch.envs.test.matrix]]
+python = ['3.10', '3.11']
+
+[tool.hatch.envs.test.scripts]
+test = 'pytest {args:--cov=fftestpackage --cov-report=term-missing}'
