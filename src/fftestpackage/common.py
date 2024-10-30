@@ -14,7 +14,7 @@ def multiply_numbers(number_1: float, number_2: float) -> float:
 
     Returns
     -------
-        A number calculated from multiplying to numbers.
+        A number calculated from multiplying two numbers.
     """
 
     return number_1 * number_2
