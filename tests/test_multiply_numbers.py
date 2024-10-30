@@ -7,4 +7,3 @@ def test_multiply_numbers():
     """Test correct output of multiply_numbers function."""
 
     assert multiply_numbers(1, 2) == 2
-
