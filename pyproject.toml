@@ -73,3 +73,29 @@ python = ['3.10', '3.11']
 
 [tool.hatch.envs.test.scripts]
 test = 'pytest {args:--cov=fftestpackage --cov-report=term-missing}'
+
+
+[tool.hatch.envs.format]
+description = '''Environment for code formatting'''
+extra-dependencies = [
+    'black',
+    'isort',
+]
+
+[tool.hatch.envs.format.scripts]
+format_code = [
+    'isort .',
+    'black .',
+]
+
+
+[tool.hatch.envs.lint]
+description = '''Environment for code linting'''
+extra-dependencies = [
+    'pylint',
+]
+
+[tool.hatch.envs.lint.scripts]
+lint_code = [
+    'pylint src/',
+]
