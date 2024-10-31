@@ -13,7 +13,7 @@ requires = ["hatchling"]
 [project]
 name = "fftestpackage"
 
-version = "0.1.0"
+version = "0.2.0"
 
 description = "This is a test package for the pyopensci fall festival."
 authors = [
